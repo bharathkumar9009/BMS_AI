@@ -28,8 +28,8 @@ export default function AboutSection() {
             className="lg:col-span-7 text-left"
           >
             {/* Pill Section Title */}
-            <div className="inline-flex items-center gap-2 bg-qp-green/10 border border-qp-green/20 rounded-full px-4.5 py-1.5 mb-6">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Who We Are</span>
+            <div className="inline-flex items-center gap-1.5 bg-qp-green/10 border border-qp-green/20 rounded-full px-2.5 py-0.5 mb-4">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Who We Are</span>
             </div>
 
             {/* Display Heading */}

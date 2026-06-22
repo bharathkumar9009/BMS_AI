@@ -191,7 +191,7 @@ function ServiceCard({
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -6 }}
-      className={`group rounded-2xl p-7.5 border transition-all duration-300 flex flex-col justify-between h-full ${
+      className={`group rounded-xl p-6 border transition-all duration-300 flex flex-col justify-between h-full ${
         dark 
           ? 'glass border-white/5 hover:border-qp-green/25 hover:shadow-card-hover' 
           : 'bg-white border-slate-200/80 hover:border-qp-green/30 hover:shadow-lg hover:shadow-slate-100'
@@ -246,8 +246,8 @@ export default function Services() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,200,46,0.08) 0%, transparent 70%)' }} />
         <div className="container-max relative z-10 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Our Services</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Our Services</span>
             </div>
             <h1 className="text-responsive-hero font-display font-bold text-white mb-6 leading-tight">
               Intelligent <span className="gradient-text text-glow-green">Battery Solutions</span>
@@ -274,8 +274,8 @@ export default function Services() {
             animate={batteryInView ? { opacity: 1, y: 0 } : {}}
             className="mb-14"
           >
-            <div className="inline-flex items-center gap-2 bg-qp-green/10 border border-qp-green/20 rounded-full px-4.5 py-1.5 mb-6">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Battery AI Services</span>
+            <div className="inline-flex items-center gap-1.5 bg-qp-green/10 border border-qp-green/20 rounded-full px-2.5 py-0.5 mb-4">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Battery AI Services</span>
             </div>
             <h2 className="text-3xl font-display font-bold text-[#0B1220] mb-4">
               AI-Powered <span className="gradient-text">Battery Intelligence</span>
@@ -301,8 +301,8 @@ export default function Services() {
             animate={techInView ? { opacity: 1, y: 0 } : {}}
             className="mb-14"
           >
-            <div className="inline-flex items-center gap-2 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Technology Services</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Technology Services</span>
             </div>
             <h2 className="text-3xl font-display font-bold text-white mb-4">
               Digital <span className="gradient-text text-glow-green">Transformation</span>

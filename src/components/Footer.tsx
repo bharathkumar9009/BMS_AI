@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, ArrowRight, ExternalLink } from 'lucide-react'
+import { Mail, Phone, ArrowRight } from 'lucide-react'
 import logo from '../assets/quantumpulse.png'
 
 const footerLinks = {
@@ -49,21 +49,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-5 group">
-              <div className="relative flex items-center justify-center">
+            <Link to="/" className="flex items-center mb-5 group">
+              <div className="relative flex items-center justify-center bg-white rounded-lg px-2.5 py-0.5 h-9 w-auto shadow-sm">
                 <img 
                   src={logo} 
                   alt="QuantumPulse Logo" 
-                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                  className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
                 />
-              </div>
-              <div>
-                <span className="text-lg font-display font-bold text-white">
-                  Quantum<span className="text-qp-green">Pulse</span>
-                </span>
-                <div className="text-[9px] text-qp-gray tracking-widest uppercase leading-none">
-                  AI Battery Intelligence
-                </div>
               </div>
             </Link>
             <p className="text-qp-gray text-sm leading-relaxed mb-6 max-w-xs">

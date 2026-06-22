@@ -55,8 +55,8 @@ export default function IndustriesSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ scale: 1.03, y: -4 }}
-                className="group bg-white rounded-2xl p-6 text-center w-[210px] sm:w-[220px] border border-slate-200/80 shadow-sm hover:shadow-md hover:border-qp-green/30 transition-all duration-300 cursor-default"
+                whileHover={{ scale: 1.03, y: -5 }}
+                className="group bg-white rounded-2xl p-6.5 text-center w-[220px] sm:w-[230px] border border-slate-200/80 shadow-md shadow-slate-100/80 hover:shadow-xl hover:shadow-slate-200/80 hover:border-qp-green/30 transition-all duration-300 cursor-default"
               >
                 {/* Icon Circle */}
                 <div className="w-12 h-12 rounded-xl bg-qp-green/10 border border-qp-green/25 flex items-center justify-center mx-auto mb-4.5 group-hover:bg-qp-green/20 group-hover:scale-110 transition-all duration-300">

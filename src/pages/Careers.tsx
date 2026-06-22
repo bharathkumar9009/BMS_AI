@@ -47,8 +47,8 @@ export default function Careers() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,200,46,0.08) 0%, transparent 70%)' }} />
         <div className="container-max relative z-10 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Join Our Team</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Join Our Team</span>
             </div>
             <h1 className="text-responsive-hero font-display font-bold text-white mb-6 leading-tight">
               Build the Future of <span className="gradient-text text-glow-green">Energy AI</span>
@@ -106,9 +106,9 @@ export default function Careers() {
             animate={jobsInView ? { opacity: 1, y: 0 } : {}}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
               <Zap size={12} className="text-qp-green fill-qp-green" />
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Open Positions</span>
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Open Positions</span>
             </div>
             <h2 className="text-responsive-heading font-display font-bold text-white mb-4">
               We're <span className="gradient-text text-glow-green">Hiring</span>
@@ -126,7 +126,7 @@ export default function Careers() {
                   animate={jobsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: i * 0.15 }}
                   whileHover={{ scale: 1.01 }}
-                  className={`group glass rounded-2xl p-7.5 border transition-all duration-300 ${
+                  className={`group glass rounded-xl p-6 border transition-all duration-300 ${
                     job.highlight 
                       ? 'border-qp-green/30 shadow-green' 
                       : 'border-white/5 hover:border-qp-green/25'
@@ -160,7 +160,7 @@ export default function Careers() {
                     </div>
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-qp-dark bg-qp-green rounded-lg hover:bg-qp-green-light transition-all duration-300 shadow-green whitespace-nowrap self-start"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold text-qp-dark bg-qp-green rounded-lg hover:bg-qp-green-light transition-all duration-300 shadow-green whitespace-nowrap w-full sm:w-auto self-stretch sm:self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qp-green focus-visible:ring-offset-2 focus-visible:ring-offset-qp-dark"
                     >
                       Apply Now <ArrowRight size={14} />
                     </Link>
@@ -187,14 +187,14 @@ export default function Careers() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-center mt-14"
           >
-            <div className="glass rounded-2xl p-8.5 border border-white/5 max-w-2xl mx-auto">
+            <div className="glass rounded-xl p-7 border border-white/5 max-w-2xl mx-auto">
               <h3 className="text-xl font-display font-bold text-white mb-3">Don't See Your Role?</h3>
               <p className="text-qp-gray text-sm mb-6.5 max-w-lg mx-auto">
                 We're always looking for talented individuals who are passionate about AI and energy technology. Send us your resume!
               </p>
-              <Link to="/contact" className="btn-outline group">
+              <Link to="/contact" className="btn-outline group text-sm px-5 py-2.5">
                 Send Your Resume 
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </motion.div>

@@ -33,12 +33,12 @@ function SectionHeader({
       transition={{ duration: 0.7 }}
       className="mb-12"
     >
-      <div className={`inline-flex items-center gap-2 rounded-full px-4.5 py-1.5 mb-6 border ${
+      <div className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 mb-4 border ${
         dark 
           ? 'glass-green border-qp-green/20' 
           : 'bg-qp-green/10 border-qp-green/25'
       }`}>
-        <span className="text-xs text-qp-green font-bold tracking-wider uppercase">{badge}</span>
+        <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">{badge}</span>
       </div>
       <h2 className={`text-responsive-heading font-display font-bold mb-4 ${
         dark ? 'text-white' : 'text-[#0B1220]'
@@ -77,8 +77,8 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">About QuantumPulse</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">About QuantumPulse</span>
             </div>
             <h1 className="text-responsive-hero font-display font-bold text-white mb-6 leading-tight">
               Redefining <span className="gradient-text text-glow-green">Battery Intelligence</span>
@@ -191,7 +191,7 @@ export default function About() {
               initial={{ opacity: 0, y: 40 }}
               animate={mvInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7 }}
-              className="glass rounded-2xl p-8.5 border border-white/5 hover:border-qp-green/20 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden h-full flex flex-col"
+              className="glass rounded-xl p-6.5 border border-white/5 hover:border-qp-green/20 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden h-full flex flex-col"
             >
               <div className="w-12 h-12 rounded-xl bg-qp-green/10 border border-qp-green/20 flex items-center justify-center mb-6 flex-shrink-0">
                 <Target size={22} className="text-qp-green" />
@@ -207,7 +207,7 @@ export default function About() {
               initial={{ opacity: 0, y: 40 }}
               animate={mvInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="glass rounded-2xl p-8.5 border border-white/5 hover:border-qp-green/20 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden h-full flex flex-col"
+              className="glass rounded-xl p-6.5 border border-white/5 hover:border-qp-green/20 hover:shadow-card-hover transition-all duration-300 relative overflow-hidden h-full flex flex-col"
             >
               <div className="w-12 h-12 rounded-xl bg-qp-green/10 border border-qp-green/20 flex items-center justify-center mb-6 flex-shrink-0">
                 <Eye size={22} className="text-qp-green" />
@@ -231,8 +231,8 @@ export default function About() {
             animate={valInView ? { opacity: 1, y: 0 } : {}}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 bg-qp-green/10 border border-qp-green/20 rounded-full px-4 py-1.5 mb-6">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Values</span>
+            <div className="inline-flex items-center gap-1.5 bg-qp-green/10 border border-qp-green/20 rounded-full px-2.5 py-0.5 mb-4">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Values</span>
             </div>
             <h2 className="text-responsive-heading font-display font-bold text-[#0B1220] mb-4">
               Core <span className="gradient-text">Principles</span>
@@ -249,7 +249,7 @@ export default function About() {
                   animate={valInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="group bg-white rounded-2xl p-6.5 border border-slate-200/80 hover:border-qp-green/25 hover:shadow-lg hover:shadow-slate-100 transition-all duration-300 text-center h-full flex flex-col items-center"
+                  className="group bg-white rounded-xl p-5.5 border border-slate-200/80 hover:border-qp-green/25 hover:shadow-lg hover:shadow-slate-100 transition-all duration-300 text-center h-full flex flex-col items-center"
                 >
                   <div className="w-12 h-12 rounded-xl bg-qp-green/10 border border-qp-green/25 flex items-center justify-center mx-auto mb-4.5 group-hover:bg-qp-green/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
                     <Icon size={20} className="text-qp-green" />

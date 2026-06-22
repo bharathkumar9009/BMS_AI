@@ -48,8 +48,8 @@ export default function Portfolio() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,200,46,0.08) 0%, transparent 70%)' }} />
         <div className="container-max relative z-10 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Portfolio & Values</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Portfolio & Values</span>
             </div>
             <h1 className="text-responsive-hero font-display font-bold text-white mb-6 leading-tight">
               Why Choose <span className="gradient-text text-glow-green">QuantumPulse?</span>
@@ -75,9 +75,9 @@ export default function Portfolio() {
             animate={featInView ? { opacity: 1, y: 0 } : {}}
             className="mb-14"
           >
-            <div className="inline-flex items-center gap-2 bg-qp-green/10 border border-qp-green/20 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-1.5 bg-qp-green/10 border border-qp-green/20 rounded-full px-2.5 py-0.5 mb-4">
               <Zap size={12} className="text-qp-green fill-qp-green" />
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Our Strengths</span>
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Our Strengths</span>
             </div>
             <h2 className="text-3xl font-display font-bold text-[#0B1220] mb-4">
               Why Choose <span className="gradient-text">QuantumPulse?</span>
@@ -119,8 +119,8 @@ export default function Portfolio() {
             animate={valInView ? { opacity: 1, y: 0 } : {}}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Values</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Values</span>
             </div>
             <h2 className="text-responsive-heading font-display font-bold text-white mb-4">
               Our Core <span className="gradient-text text-glow-green">Values</span>
@@ -137,7 +137,7 @@ export default function Portfolio() {
                   animate={valInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: i * 0.08 }}
                   whileHover={{ y: -6 }}
-                  className="group glass rounded-2xl p-6.5 border border-white/5 hover:border-qp-green/25 hover:shadow-card-hover transition-all duration-300 text-center h-full flex flex-col items-center"
+                  className="group glass rounded-xl p-5.5 border border-white/5 hover:border-qp-green/25 hover:shadow-card-hover transition-all duration-300 text-center h-full flex flex-col items-center"
                 >
                   <div className="w-13 h-13 rounded-xl flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:scale-110 flex-shrink-0"
                     style={{ background: 'linear-gradient(135deg, rgba(0,200,46,0.15), rgba(0,200,46,0.05))', border: '1px solid rgba(0,200,46,0.25)' }}>

@@ -27,8 +27,8 @@ export default function Leadership() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,200,46,0.08) 0%, transparent 70%)' }} />
         <div className="container-max relative z-10 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Leadership</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Leadership</span>
             </div>
             <h1 className="text-responsive-hero font-display font-bold text-white mb-6 leading-tight">
               Meet Our <span className="gradient-text text-glow-green">Visionary Leader</span>
@@ -182,9 +182,9 @@ export default function Leadership() {
             animate={timelineInView ? { opacity: 1, y: 0 } : {}}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
               <Clock size={12} className="text-qp-green" />
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Career Journey</span>
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Career Journey</span>
             </div>
             <h2 className="text-3xl font-display font-bold text-white mb-4">
               Professional <span className="gradient-text text-glow-green">Timeline</span>

@@ -155,8 +155,8 @@ export default function ServicesHighlight() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 glass-green rounded-full px-4 py-2 mb-6">
-            <span className="text-xs text-qp-green font-medium tracking-wider uppercase">Our Solutions</span>
+          <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+            <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Our Solutions</span>
           </div>
           <h2 className="text-responsive-heading font-display font-bold text-white mb-4">
             Intelligent <span className="gradient-text">Battery Intelligence</span>
@@ -175,7 +175,7 @@ export default function ServicesHighlight() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               whileHover={{ y: -6 }}
-              className="group glass rounded-2xl p-7 border border-white/5 hover:border-qp-green/20 hover:shadow-card-hover transition-all duration-300 cursor-default flex flex-col justify-between h-full"
+              className="group glass rounded-xl p-6 border border-white/5 hover:border-qp-green/20 hover:shadow-card-hover transition-all duration-300 cursor-default flex flex-col justify-between h-full"
               style={{ '--hover-glow': `0 8px 40px rgba(0,200,46,0.12)` } as React.CSSProperties}
             >
               <div>
@@ -185,8 +185,8 @@ export default function ServicesHighlight() {
                 </div>
 
                 <h3 className="text-lg font-display font-semibold text-white mb-3 group-hover:text-qp-green transition-colors duration-300">
-                  {svc.title}
-                </h3>
+                  {svc.title
+                }</h3>
                 <p className="text-sm text-qp-gray leading-relaxed mb-6">
                   {svc.desc}
                 </p>
@@ -208,9 +208,9 @@ export default function ServicesHighlight() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center mt-14"
         >
-          <Link to="/services" className="btn-outline group">
+          <Link to="/services" className="btn-outline group text-sm px-5 py-2.5">
             View All Services 
-            <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </motion.div>
 

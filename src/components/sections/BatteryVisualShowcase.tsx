@@ -367,8 +367,8 @@ export default function BatteryVisualShowcase() {
         
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 glass-green rounded-full px-4 py-1.5 mb-5 border border-qp-green/20">
-            <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Product Showcase</span>
+          <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+            <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Product Showcase</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-responsive-heading font-display font-bold text-white mb-4">
             Battery Intelligence <span className="gradient-text">Systems Showcase</span>
@@ -381,26 +381,30 @@ export default function BatteryVisualShowcase() {
         {/* Tab system grid */}
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left Panel: Tabs select list (horizontal scrolling on mobile to prevent clipping) */}
-          <div className="lg:col-span-4 flex lg:flex-col gap-2.5 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-thin scrollbar-thumb-qp-green scrollbar-track-qp-dark-2">
-            {systems.map((sys) => {
-              const Icon = sys.icon
-              const isActive = activeTab === sys.id
-              return (
-                <button
-                  key={sys.id}
-                  onClick={() => setActiveTab(sys.id)}
-                  className={`flex items-center gap-3.5 px-4.5 py-3 rounded-xl border text-sm font-semibold transition-all duration-300 whitespace-nowrap lg:whitespace-normal text-left flex-shrink-0 lg:flex-shrink-grow ${
-                    isActive 
-                      ? 'bg-qp-green text-qp-dark border-qp-green shadow-green' 
-                      : 'bg-qp-dark-2 text-qp-gray-light border-white/5 hover:border-qp-green/25 hover:text-white'
-                  }`}
-                >
-                  <Icon size={16} className={isActive ? 'text-qp-dark' : 'text-qp-green'} />
-                  <span>{sys.label}</span>
-                </button>
-              )
-            })}
+          {/* Left Panel: Tabs select list (horizontal scrolling on mobile with fade hint) */}
+          <div className="lg:col-span-4 relative">
+            {/* Fade right hint only on mobile scrolls */}
+            <div className="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-qp-dark to-transparent pointer-events-none lg:hidden z-10" />
+            <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-thin scrollbar-thumb-qp-green scrollbar-track-qp-dark-2 relative z-0">
+              {systems.map((sys) => {
+                const Icon = sys.icon
+                const isActive = activeTab === sys.id
+                return (
+                  <button
+                    key={sys.id}
+                    onClick={() => setActiveTab(sys.id)}
+                    className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg border text-xs font-semibold transition-all duration-300 whitespace-nowrap lg:whitespace-normal text-left flex-shrink-0 lg:flex-shrink-grow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qp-green focus-visible:ring-offset-2 focus-visible:ring-offset-qp-dark ${
+                      isActive 
+                        ? 'bg-qp-green text-qp-dark border-qp-green shadow-green' 
+                        : 'bg-qp-dark-2 text-qp-gray-light border-white/5 hover:border-qp-green/25 hover:text-white'
+                    }`}
+                  >
+                    <Icon size={14} className={isActive ? 'text-qp-dark' : 'text-qp-green'} />
+                    <span>{sys.label}</span>
+                  </button>
+                )
+              })}
+            </div>
           </div>
 
           {/* Right Panel: Animated SVG Visual Board */}
@@ -412,7 +416,7 @@ export default function BatteryVisualShowcase() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-full flex items-center justify-center max-w-[480px] mx-auto"
+                className="w-full h-full flex items-center justify-center max-w-[480px] lg:max-w-[580px] mx-auto"
               >
                 {renderSVG()}
               </motion.div>

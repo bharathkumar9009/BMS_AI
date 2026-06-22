@@ -44,8 +44,8 @@ export default function Contact() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,200,46,0.08) 0%, transparent 70%)' }} />
         <div className="container-max relative z-10 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1.5 mb-6 border border-qp-green/20">
-              <span className="text-xs text-qp-green font-bold tracking-wider uppercase">Contact Us</span>
+            <div className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-4 border border-qp-green/20">
+              <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">Contact Us</span>
             </div>
             <h1 className="text-responsive-hero font-display font-bold text-white mb-6 leading-tight">
               Let's <span className="gradient-text text-glow-green">Connect</span>
@@ -180,8 +180,9 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Full Name *</label>
+                        <label htmlFor="full-name" className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Full Name *</label>
                         <input
+                          id="full-name"
                           type="text"
                           required
                           value={formData.name}
@@ -191,8 +192,9 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Email Address *</label>
+                        <label htmlFor="email-address" className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Email Address *</label>
                         <input
+                          id="email-address"
                           type="email"
                           required
                           value={formData.email}
@@ -204,8 +206,9 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Company</label>
+                      <label htmlFor="company-name" className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Company</label>
                       <input
+                        id="company-name"
                         type="text"
                         value={formData.company}
                         onChange={e => setFormData({ ...formData, company: e.target.value })}
@@ -215,8 +218,9 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Subject *</label>
+                      <label htmlFor="contact-subject" className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Subject *</label>
                       <input
+                        id="contact-subject"
                         type="text"
                         required
                         value={formData.subject}
@@ -227,8 +231,9 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Message *</label>
+                      <label htmlFor="contact-message" className="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Message *</label>
                       <textarea
+                        id="contact-message"
                         required
                         rows={5}
                         value={formData.message}
@@ -278,9 +283,9 @@ export default function Contact() {
               href="https://www.linkedin.com/in/quantum-pulse-062963413"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary inline-flex gap-2"
+              className="btn-primary inline-flex gap-2 text-sm px-5 py-2.5"
             >
-              <ExternalLink size={16} /> Follow on LinkedIn
+              <ExternalLink size={14} /> Follow on LinkedIn
             </a>
           </motion.div>
         </div>

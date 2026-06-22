@@ -85,13 +85,13 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2.5 glass-green rounded-full px-4.5 py-1 mb-4.5 border border-qp-green/20"
+                className="inline-flex items-center gap-1.5 glass-green rounded-full px-2.5 py-0.5 mb-3 border border-qp-green/20"
               >
-                <span className="relative flex h-2 w-2">
+                <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-qp-green opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-qp-green"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-qp-green"></span>
                 </span>
-                <span className="text-[11px] text-qp-green font-semibold tracking-wider uppercase">
+                <span className="text-[9.5px] text-qp-green font-bold tracking-wider uppercase">
                   AI Battery Intelligence Platform
                 </span>
               </motion.div>
@@ -132,13 +132,19 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap gap-4 mb-8"
+                className="flex flex-col sm:flex-row gap-4 mb-4 sm:mb-8"
               >
-                <Link to="/services" className="btn-primary group text-sm px-6 py-2.5">
+                <Link 
+                  to="/services" 
+                  className="btn-primary group text-sm px-5 py-2.5 w-full sm:w-auto justify-center flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qp-green focus-visible:ring-offset-2 focus-visible:ring-offset-qp-dark"
+                >
                   Explore Solutions 
                   <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
-                <Link to="/contact" className="btn-outline text-sm px-6 py-2.5">
+                <Link 
+                  to="/contact" 
+                  className="btn-outline text-sm px-5 py-2.5 w-full sm:w-auto justify-center flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qp-green focus-visible:ring-offset-2 focus-visible:ring-offset-qp-dark"
+                >
                   Get Demo
                 </Link>
               </motion.div>

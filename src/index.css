@@ -322,3 +322,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
+/* Keyboard Accessibility Focus Rings */
+*:focus-visible {
+  outline: 2px solid var(--qp-green);
+  outline-offset: 4px;
+}
+
+
