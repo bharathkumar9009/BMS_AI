@@ -50,13 +50,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center mb-5 group">
-              <div className="relative flex items-center justify-center bg-white rounded-none px-3 py-0.5 h-9 w-auto shadow-sm">
-                <img 
-                  src={logo} 
-                  alt="QuantumPulse Logo" 
-                  className="h-[75%] w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-                />
-              </div>
+              <img 
+                src={logo} 
+                alt="QuantumPulse Logo" 
+                className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
             </Link>
             <p className="text-qp-gray text-sm leading-relaxed mb-6 max-w-xs">
               Revolutionizing battery technology through artificial intelligence. 

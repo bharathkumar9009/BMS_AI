@@ -44,13 +44,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-18 py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <div className="relative flex items-center justify-center bg-white rounded-none px-3 py-0.5 h-8 sm:h-9 w-auto shadow-sm">
-              <img 
-                src={logo} 
-                alt="QuantumPulse Logo" 
-                className="h-[75%] w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-              />
-            </div>
+            <img 
+              src={logo} 
+              alt="QuantumPulse Logo" 
+              className="h-[22px] sm:h-[26px] md:h-[30px] w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            />
           </Link>
 
           {/* Desktop Nav */}

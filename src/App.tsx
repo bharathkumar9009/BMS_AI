@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import ScrollProgress from './components/ui/ScrollProgress'
 import BackToTop from './components/ui/BackToTop'
 import PageLoader from './components/ui/PageLoader'
+import ScrollToTop from './components/ui/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-qp-dark text-white">
+      <ScrollToTop />
       <ScrollProgress />
       <Navbar />
       <AnimatePresence mode="wait">
