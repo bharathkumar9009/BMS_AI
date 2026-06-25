@@ -378,14 +378,12 @@ export default function BatteryVisualShowcase() {
           </p>
         </div>
 
-        {/* Tab system grid */}
-        <div className="grid lg:grid-cols-12 gap-8 items-start">
+        {/* Tab system grid (Desktop layout) */}
+        <div className="hidden lg:grid lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left Panel: Tabs select list (horizontal scrolling on mobile with fade hint) */}
+          {/* Left Panel: Tabs select list */}
           <div className="lg:col-span-4 relative">
-            {/* Fade right hint only on mobile scrolls */}
-            <div className="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-qp-dark to-transparent pointer-events-none lg:hidden z-10" />
-            <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-thin scrollbar-thumb-qp-green scrollbar-track-qp-dark-2 relative z-0">
+            <div className="flex lg:flex-col gap-2 relative z-0">
               {systems.map((sys) => {
                 const Icon = sys.icon
                 const isActive = activeTab === sys.id
@@ -393,7 +391,7 @@ export default function BatteryVisualShowcase() {
                   <button
                     key={sys.id}
                     onClick={() => setActiveTab(sys.id)}
-                    className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg border text-xs font-semibold transition-all duration-300 whitespace-nowrap lg:whitespace-normal text-left flex-shrink-0 lg:flex-shrink-grow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qp-green focus-visible:ring-offset-2 focus-visible:ring-offset-qp-dark ${
+                    className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg border text-xs font-semibold transition-all duration-300 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qp-green focus-visible:ring-offset-2 focus-visible:ring-offset-qp-dark ${
                       isActive 
                         ? 'bg-qp-green text-qp-dark border-qp-green shadow-green' 
                         : 'bg-qp-dark-2 text-qp-gray-light border-white/5 hover:border-qp-green/25 hover:text-white'
@@ -408,7 +406,7 @@ export default function BatteryVisualShowcase() {
           </div>
 
           {/* Right Panel: Animated SVG Visual Board */}
-          <div className="lg:col-span-8 bg-qp-dark-2 rounded-2xl border border-white/5 p-4 sm:p-6 lg:p-8 flex items-center justify-center min-h-[300px] sm:min-h-[360px] lg:min-h-[400px]">
+          <div className="lg:col-span-8 bg-qp-dark-2 rounded-2xl border border-white/5 p-4 sm:p-6 lg:p-8 flex items-center justify-center min-h-[400px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -416,13 +414,61 @@ export default function BatteryVisualShowcase() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="w-full h-full flex items-center justify-center max-w-[480px] lg:max-w-[580px] mx-auto"
+                className="w-full h-full flex items-center justify-center max-w-[580px] mx-auto"
               >
                 {renderSVG()}
               </motion.div>
             </AnimatePresence>
           </div>
 
+        </div>
+
+        {/* Accordion List (Mobile layout) */}
+        <div className="lg:hidden space-y-3">
+          {systems.map((sys) => {
+            const Icon = sys.icon
+            const isActive = activeTab === sys.id
+            return (
+              <div key={sys.id} className="rounded-xl border border-white/5 bg-qp-dark-2 overflow-hidden">
+                <button
+                  onClick={() => setActiveTab(isActive ? '' : sys.id)}
+                  className={`w-full flex items-center justify-between px-4.5 py-3.5 text-xs font-bold transition-all duration-300 text-left ${
+                    isActive 
+                      ? 'bg-qp-green text-qp-dark' 
+                      : 'text-qp-gray-light hover:text-white'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon size={14} className={isActive ? 'text-qp-dark' : 'text-qp-green'} />
+                    <span>{sys.label}</span>
+                  </div>
+                  <motion.span
+                    animate={{ rotate: isActive ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-[10px] opacity-70"
+                  >
+                    ▼
+                  </motion.span>
+                </button>
+                
+                <AnimatePresence initial={false}>
+                  {isActive && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="border-t border-white/5 p-4 bg-qp-dark-3/50 flex items-center justify-center min-h-[220px]"
+                    >
+                      <div className="w-full max-w-[340px]">
+                        {renderSVG()}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )
+          })}
         </div>
 
       </div>
