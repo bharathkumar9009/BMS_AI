@@ -5,7 +5,18 @@ export default function ScrollToTop() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+  }, [])
+
+  useEffect(() => {
+    // Force immediate scroll to top, bypassing CSS smooth-scroll to prevent page overlap glitches
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    })
   }, [pathname])
 
   return null
