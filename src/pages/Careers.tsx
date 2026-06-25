@@ -132,7 +132,7 @@ export default function Careers() {
                       : 'border-white/5 hover:border-qp-green/25'
                   }`}
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-5.5">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-6">
                     <div className="flex items-start gap-4.5">
                       <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
                         job.highlight 

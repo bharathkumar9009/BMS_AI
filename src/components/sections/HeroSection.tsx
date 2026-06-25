@@ -122,7 +122,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-qp-gray-light leading-relaxed mb-5.5 max-w-xl text-xs sm:text-sm"
+                className="text-qp-gray-light leading-relaxed mb-8 max-w-xl text-xs sm:text-sm"
               >
                 QuantumPulse was founded with a vision to bridge the gap between business challenges and technological innovation. Our AI-powered platform analyzes real-time battery data, predicts performance issues before they occur, and provides actionable insights for efficient energy management.
               </motion.p>

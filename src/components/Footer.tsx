@@ -50,11 +50,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center mb-5 group">
-              <div className="relative flex items-center justify-center bg-white rounded-lg px-2.5 py-0.5 h-9 w-auto shadow-sm">
+              <div className="relative flex items-center justify-center bg-white rounded-none px-3 py-0.5 h-9 w-auto shadow-sm">
                 <img 
                   src={logo} 
                   alt="QuantumPulse Logo" 
-                  className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                  className="h-[75%] w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
                 />
               </div>
             </Link>
