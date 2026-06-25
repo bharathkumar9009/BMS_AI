@@ -90,15 +90,15 @@ export default function Contact() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={formInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.5, delay: i * 0.1 }}
-                        whileHover={{ x: 5 }}
-                        className="flex items-center gap-4.5 bg-white rounded-xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-qp-green/30 transition-all duration-300 group"
+                        whileHover={{ x: 6, scale: 1.01 }}
+                        className="flex items-center gap-5 bg-white/95 rounded-xl p-5 border border-slate-100 shadow-sm hover:shadow-md hover:border-qp-green/30 transition-all duration-300 group"
                       >
-                        <div className="w-11 h-11 rounded-lg bg-qp-green/10 border border-qp-green/20 flex items-center justify-center flex-shrink-0 group-hover:bg-qp-green/20 transition-all duration-300">
-                          <Icon size={18} className="text-qp-green" />
+                        <div className="w-12 h-12 rounded-xl bg-qp-green/10 border border-qp-green/20 flex items-center justify-center flex-shrink-0 group-hover:bg-qp-green/20 transition-all duration-300">
+                          <Icon size={20} className="text-qp-green" />
                         </div>
                         <div>
-                          <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">{info.label}</div>
-                          <div className="text-sm font-bold text-slate-700 group-hover:text-qp-green transition-colors duration-300 break-all">
+                          <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-1">{info.label}</div>
+                          <div className="text-[15px] font-bold text-slate-800 group-hover:text-qp-green transition-colors duration-300 break-all">
                             {info.value}
                           </div>
                         </div>
@@ -108,7 +108,7 @@ export default function Contact() {
                 </div>
 
                 {/* Map Coordinates Visual Placeholder (High-tech SVG Grid) */}
-                <div className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-100">
+                <div className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm">
                   <div className="h-44 bg-[#0B1220] flex items-center justify-center relative">
                     <div className="absolute inset-0 animated-grid opacity-30" />
                     
